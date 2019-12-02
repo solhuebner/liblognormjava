@@ -8,6 +8,8 @@ You can run the example via:
 javac test.java && java test
 ```
 
+It will also create a debug.log (and if there are errors a error.log file).
+
 And you should get the following output:
 ```
 Loaded liblognorm library
