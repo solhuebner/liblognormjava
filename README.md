@@ -3,6 +3,21 @@ How to build liblognormjava
 
 This document assumes CentOS 7 and your commands might differ slightly!
 
+You can run the example via:
+```
+javac test.java && java test
+```
+
+And should get the following output:
+```
+Loaded liblognorm library
+Loaded sample rulebase
+JsonET: { "r4": "fourth field", "r3": "third field", "r2": "second field", "r1": "first field", "event.tags": [ "csv" ] }
+Json  : { "r4": "fourth field", "r3": "third field", "r2": "second field", "r1": "first field" }
+XML   : <event><event.tags><tag>csv</tag></event.tags><field name="r4"><value>fourth field</value></field><field name="r3"><value>third field</value></field><field name="r2"><value>second field</value></field><field name="r1"><value>first field</value></field></event>
+CEE   : [cee@115 event.tags="csv" r4="fourth field" r3="third field" r2="second field" r1="first field"]
+```
+
 Rsyslog
 -------
 
