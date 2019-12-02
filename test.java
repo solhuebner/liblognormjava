@@ -7,7 +7,7 @@ public class test {
         
         try {
             
-        	SWIGTYPE_p_ln_ctx_s ctx = null;
+            SWIGTYPE_p_ln_ctx_s ctx = null;
 
             String errorLogFile = "error.log";
             String debugLogFile = "debug.log";
