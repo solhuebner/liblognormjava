@@ -8,7 +8,7 @@ You can run the example via:
 javac test.java && java test
 ```
 
-And should get the following output:
+And you should get the following output:
 ```
 Loaded liblognorm library
 Loaded sample rulebase
