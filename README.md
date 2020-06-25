@@ -32,7 +32,7 @@ wget http://rpms.adiscon.com/v8-stable/rsyslog.repo
 SWIG
 ----
 
-Install swig 4.0.1 from source http://www.swig.org/ (the yum file is pretty old!):
+Install swig 4.0.2 from source http://www.swig.org/ (the yum file is pretty old!):
 ```
 yum groupinstall 'Development Tools'
 yum remove swig
@@ -41,9 +41,9 @@ yum install pcre-devel
 yum install prelink
 yum install boost-devel
 cd ~
-wget http://prdownloads.sourceforge.net/swig/swig-4.0.1.tar.gz
-tar xvzf swig-4.0.1.tar.gz
-cd swig-4.0.1
+wget http://prdownloads.sourceforge.net/swig/swig-4.0.2.tar.gz
+tar xvzf swig-4.0.2.tar.gz
+cd swig-4.0.2
 ./configure
 make
 make check
@@ -325,7 +325,7 @@ Create **liblognormjava.i** with the following content:
 
 ```
 swig -java -package sh.tools.liblognormjava liblognormjava.i
-gcc -fPIC -c liblognormjava_wrap.c -I/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.232.b09-0.el7_7.x86_64/include -I/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.232.b09-0.el7_7.x86_64/include/linux -I/usr/include/libfastjson
+gcc -fPIC -c liblognormjava_wrap.c -I/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64/include -I/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64/include/linux -I/usr/include/libfastjson
 ld -G liblognormjava_wrap.o .libs/liblognorm.a /usr/lib64/libfastjson.so.4.2.0 /usr/lib64/libestr.so.0.0.0 -o /tmp/liblognormjava.so
 ```
 
@@ -337,7 +337,7 @@ Notes
 
 Building against the static version of liblognorm (**liblognorm.a**) makes it portable.
 
-**-I/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.232.b09-0.el7_7.x86_64/include** might be different on your system as it is depending on the installed Java version.
+**-I/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64/include** might be different on your system as it is depending on the installed Java version.
 
 **/tmp/liblognormjava.so** is the new shared library that we can load from Java.
 
